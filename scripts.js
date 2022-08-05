@@ -18,7 +18,7 @@ const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 // console.log(urlParams);
-const style = urlParams.get('style')
+const style = urlParams.get('style') || 'banner-top-prematch-dark'
 console.log(style);
 
 function start() {
