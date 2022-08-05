@@ -14,15 +14,22 @@ var getJSON = function (url, callback) {
     xhr.send();
 };
 
+const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+// console.log(urlParams);
+const style = urlParams.get('style')
+console.log(style);
+
 function start() {
     let container = document.getElementById('slideshow-container');
     let slide_data = [];
     // container.innerHTML ='';
-    var article_url = 'https://tawk.help/api/article?slug=banner-top&propertyId=5ecc2a98c75cbf1769ef3f32&siteId=primary';
+    var article_url = 'https://tawk.help/api/article?slug='+style+'&propertyId=5ecc2a98c75cbf1769ef3f32&siteId=primary';
     getJSON(article_url,
         function (err, data) {
             if (err !== null) {
-                alert('Something went wrong: ' + err);
+                console.log('Something went wrong: ' + err);
             } else {
                 var ar = data.data.article;
                 var content = ar.contents;
@@ -50,10 +57,7 @@ function start() {
                     img.setAttribute('src', slide_data[i].src);
                     img.setAttribute('style', "width:100%");
                     slide.appendChild(img);
-                    container.appendChild(slide);
-
-                 
-
+                    container.appendChild(slide);                 
                 }
                 showSlides(slideIndex);
                 setInterval(() => {
@@ -64,6 +68,8 @@ function start() {
 
 
 }
+
+
 
 let slideIndex = 1;
 
