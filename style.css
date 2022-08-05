@@ -72,7 +72,7 @@ img {
 
 .container {
   width: 100%;
-  height: 100vh;
+  height: 350px;
   background-color: #2C302E;
   display: flex;
   position: relative;
@@ -81,7 +81,7 @@ img {
 .left-col, .right-col {
   width: 100%;
   box-sizing: border-box;
-  height: calc(100% - 4rem);
+  /* height: calc(100% - 4rem); */
   overflow: hidden;
 }
 
@@ -89,7 +89,7 @@ img {
   background-size: cover;
   background-postion: center top;
   overflow: hidden;
-  margin: 2rem;
+  /* margin: 2rem; */
   position: relative;
 }
 .left-col .slide {
