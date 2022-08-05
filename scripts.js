@@ -29,7 +29,7 @@ function start() {
     getJSON(article_url,
         function (err, data) {
             if (err !== null) {
-                console.log('Something went wrong: ' + err);
+                console.log('Something went wrong: ' + err);                
             } else {
                 var ar = data.data.article;
                 var content = ar.contents;
