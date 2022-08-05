@@ -25,7 +25,7 @@ function start() {
     let container = document.getElementById('slideshow-container');
     let slide_data = [];
     // container.innerHTML ='';
-    var article_url = 'https://tawk.help/api/article?slug='+style+'&propertyId=5ecc2a98c75cbf1769ef3f32&siteId=primary';
+    var article_url = 'https://tawk.help/api/article?slug='+style.toLowerCase()+'&propertyId=5ecc2a98c75cbf1769ef3f32&siteId=primary';
     getJSON(article_url,
         function (err, data) {
             if (err !== null) {
