@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body style="margin: 0;">
 
-    <div class="slideshow-container" id="slideshow-container">
-      <a class="prev" onclick="plusSlides(-1)"><</a>
-        <a class="next" onclick="plusSlides(1)">></a>
-      </div>
-      <script src="scripts.js"></script>
-    </body>
-  </html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+ 
+</head>
+
+<body style="margin: 0;">
+
+  <div class="swiper" style="width: 100%;">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper" id="swiper-wrapper">
+     
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+  </div>
+  <script src="swiper.js"></script>
+  
+</body>
+
+</html>
